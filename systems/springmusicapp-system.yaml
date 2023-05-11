@@ -3,7 +3,7 @@ apiVersion: backstage.io/v1alpha1
 kind: System
 metadata:
   name: springmusicui
-  description: Storefront Web Application for fictitious e-commerce
+  description: Springmusic Web Application for fictitious e-commerce
 spec:
   owner: team-springmusic       # 所有者を指定
   domain: springmusic-webapp    # domain名を指定
