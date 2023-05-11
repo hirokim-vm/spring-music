@@ -2,7 +2,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: springmusic-app-app
+  name: springmusic-webapp
   description: Tanzu Spring Web App
   tags:
     - app-accelerator
