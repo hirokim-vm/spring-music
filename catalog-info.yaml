@@ -3,7 +3,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Location
 metadata:
   name: springmusic-catalog-info
-  description: A catalog for the StoreWeb application
+  description: A catalog for the Springmusic application
 spec:
   targets:
     - ./components/springmusic-app-info.yaml  # Componentの定義情報 Github上のpath
