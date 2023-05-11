@@ -1,0 +1,27 @@
+# org.yaml
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: springmusic-dev-org
+  description: The Springmusic Business Development organization
+  links:
+    - url: https://tanzu.vmware.com/jp/tanzu
+      title: Website
+    - url: https://tanzu.vmware.com/jp/application-platform
+      title: tap product
+spec:
+  type: organization
+  profile:
+    displayName: Springmusic Business Development
+    email: demo@example.com
+    picture: https://avatars.dicebear.com/api/identicon/info@example.com.svg?background=%23fff&margin=25
+  children: [team-springmusic]   # このGroupの配下の子Groupを指定している
+---
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: org-group
+  description: Team under Springmusic Business Development
+spec:
+  targets:
+    - ./team-sm-group.yaml     # 子Groupの定義情報 Github上のpath
