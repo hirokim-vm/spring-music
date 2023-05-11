@@ -1,0 +1,38 @@
+# team-sm-group.yaml
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: team-springmusic
+  description: Team Springmusic
+spec:
+  type: team
+  profile:
+    # Intentional no displayName for testing
+    email: team-sf@example.com
+    picture: https://avatars.dicebear.com/api/identicon/team-sf@example.com.svg?background=%23fff&margin=25
+  parent: springmusic-dev-org   # 親groupを指定する
+  children: []
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: hirokim
+spec:
+  profile:
+    displayName: Hiroki Matsubara   # TAP GUI上に表示されるユーザ名
+    email: hirokim@vmware.com       # TAP GUI上に表示されるメールアドレス
+    picture: https://avatars.dicebear.com/api/avataaars/hirokim@vmware.com.svg?background=%23fff
+  memberOf: [team-springmusic]   # 所属するgroupを指定
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: vmware-employee1
+spec:
+  profile:
+    displayName: VMware Tanzu
+    email: guest2@example.com
+    picture: https://avatars.dicebear.com/api/avataaars/guest2@example.com.svg?background=%23fff
+  memberOf: [team-springmusic]
